@@ -1,0 +1,143 @@
+
+<style>
+  .j-wrap { font-family: var(--font-sans); max-width: 660px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); margin: 1.5rem 0 0.6rem; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .card-icon { font-size: 20px; width: 28px; text-align: center; }
+  .card-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-time { font-size: 12px; color: var(--color-text-secondary); background: var(--color-background-secondary); padding: 2px 8px; border-radius: var(--border-radius-md); }
+  .prompt-list { display: flex; flex-direction: column; gap: 6px; }
+  .prompt { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; }
+  .prompt-q { font-size: 13px; color: var(--color-text-primary); margin: 0 0 2px; font-weight: 500; }
+  .prompt-hint { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 1.25rem 0; }
+  .setup-steps { display: flex; flex-direction: column; gap: 8px; }
+  .sstep { display: flex; gap: 12px; align-items: flex-start; padding: 9px 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); }
+  .sstep-num { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); min-width: 18px; padding-top: 1px; }
+  .sstep p { font-size: 13px; color: var(--color-text-primary); margin: 0 0 2px; }
+  .sstep .hint { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .kbd { display: inline-block; font-size: 11px; font-family: var(--font-mono); background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 4px; padding: 1px 5px; color: var(--color-text-secondary); }
+  .tip { padding: 10px 14px; border-radius: var(--border-radius-md); border: 0.5px solid; font-size: 13px; margin-top: 0.75rem; }
+  .tip-blue { background: var(--color-background-info); border-color: var(--color-border-info); color: var(--color-text-info); }
+  .tip-green { background: var(--color-background-success); border-color: var(--color-border-success); color: var(--color-text-success); }
+  .weekly-card { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+  .wcell { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .wcell-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .wcell-q { font-size: 13px; color: var(--color-text-primary); margin: 0; }
+  .badge-row { display: flex; gap: 8px; margin-top: 1rem; flex-wrap: wrap; }
+  .badge { font-size: 11px; padding: 3px 10px; border-radius: var(--border-radius-md); font-weight: 500; }
+  .badge-blue { background: var(--color-background-info); color: var(--color-text-info); }
+  .badge-amber { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .badge-green { background: var(--color-background-success); color: var(--color-text-success); }
+</style>
+
+<div class="j-wrap">
+
+  <div class="section-label">Initial setup — iPhone or iPad</div>
+  <div class="setup-steps">
+    <div class="sstep"><span class="sstep-num">1</span><div><p>Open <strong>Journal</strong> app (comes with iOS 17.2+)</p><p class="hint">If missing: App Store → search "Journal" → install the Apple one</p></div></div>
+    <div class="sstep"><span class="sstep-num">2</span><div><p>Tap <strong>Get Started</strong> → allow notifications when prompted</p><p class="hint">You want the morning and evening reminders — set them in the next step</p></div></div>
+    <div class="sstep"><span class="sstep-num">3</span><div><p>Go to <strong>Settings app → Journal</strong></p><p class="hint">Set two reminders: Morning at 8:00 am · Evening at 8:30 pm</p></div></div>
+    <div class="sstep"><span class="sstep-num">4</span><div><p>Back in Journal → tap <strong>+</strong> → choose <strong>New Entry</strong></p><p class="hint">Ignore the suggested prompts for now — you'll use the ones below instead</p></div></div>
+  </div>
+
+  <div class="tip tip-blue" style="margin-top: 0.75rem;">💡 Journal entries are end-to-end encrypted on device and locked with Face ID. Nothing syncs to iCloud unless you enable it — it's genuinely private.</div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Morning entry — 3 minutes</div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">☀️</span>
+      <span class="card-title">Morning intention</span>
+      <span class="card-time">~3 min · 8:00 am</span>
+    </div>
+    <div class="prompt-list">
+      <div class="prompt">
+        <p class="prompt-q">What is the one thing that would make today feel successful?</p>
+        <p class="prompt-hint">Single answer only — forces prioritisation</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">What's weighing on me that I should put in Reminders right now?</p>
+        <p class="prompt-hint">Capture to Inbox immediately — clear the mental RAM</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">Who do I need to connect with or follow up on today?</p>
+        <p class="prompt-hint">Optional — skip if nothing comes to mind</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Evening entry — 5 minutes</div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🌙</span>
+      <span class="card-title">Evening review</span>
+      <span class="card-time">~5 min · 8:30 pm</span>
+    </div>
+    <div class="prompt-list">
+      <div class="prompt">
+        <p class="prompt-q">Three things that went well today — however small</p>
+        <p class="prompt-hint">Non-negotiable: always three, even on bad days</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">What didn't happen today that needs to move forward?</p>
+        <p class="prompt-hint">Open Reminders and move it to This Week or Someday now</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">One thing I want to remember or think about tomorrow</p>
+        <p class="prompt-hint">Optional — a thought, feeling, or idea worth keeping</p>
+      </div>
+    </div>
+  </div>
+  <div class="tip tip-green">✅ The evening review is the glue. When you skip it, tasks pile up in your head overnight. Even 2 minutes is enough — just answer the first two prompts.</div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Weekly review — Sunday evening, 15 minutes</div>
+  <div class="weekly-card">
+    <div class="wcell">
+      <p class="wcell-label">Brain dump</p>
+      <p class="wcell-q">What's still floating in my head that isn't captured anywhere?</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Reminders</p>
+      <p class="wcell-q">Clear done items · Move stale tasks to Someday · Set up Today for Monday</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Look back</p>
+      <p class="wcell-q">What was the highlight of this week? What drained me most?</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Look ahead</p>
+      <p class="wcell-q">What are the 3 most important things for next week?</p>
+    </div>
+  </div>
+  <div class="tip tip-blue" style="margin-top: 0.75rem;">💡 Create a new Notes scratch pad note on Sunday too — title it with next week's number (e.g. "W15 2026") so it's ready Monday morning.</div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">How the three apps work together</div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 14px 16px;">
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+      <span style="font-size: 13px; min-width: 20px; color: var(--color-text-secondary); font-weight: 500;">AM</span>
+      <span style="font-size: 13px; color: var(--color-text-primary)"><strong>Journal</strong> → set intention → dump anything unplanned into <strong>Reminders Inbox</strong></span>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+      <span style="font-size: 13px; min-width: 20px; color: var(--color-text-secondary); font-weight: 500;">Day</span>
+      <span style="font-size: 13px; color: var(--color-text-primary)"><strong>Reminders</strong> for tasks · <strong>Notes</strong> for thinking and meeting notes</span>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+      <span style="font-size: 13px; min-width: 20px; color: var(--color-text-secondary); font-weight: 500;">PM</span>
+      <span style="font-size: 13px; color: var(--color-text-primary)"><strong>Journal</strong> → review → update <strong>Reminders</strong> lists for tomorrow</span>
+    </div>
+  </div>
+
+  <div class="badge-row">
+    <span class="badge badge-blue">iPhone / iPad only</span>
+    <span class="badge badge-amber">iOS 17.2+ required</span>
+    <span class="badge badge-green">Face ID locked · private</span>
+  </div>
+
+</div>

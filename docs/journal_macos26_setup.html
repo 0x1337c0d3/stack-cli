@@ -1,0 +1,171 @@
+
+<style>
+  .j-wrap { font-family: var(--font-sans); max-width: 660px; }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); margin: 1.5rem 0 0.6rem; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 10px; }
+  .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .card-icon { font-size: 18px; width: 28px; text-align: center; }
+  .card-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-badge { font-size: 11px; padding: 2px 8px; border-radius: var(--border-radius-md); font-weight: 500; }
+  .badge-blue { background: var(--color-background-info); color: var(--color-text-info); }
+  .badge-green { background: var(--color-background-success); color: var(--color-text-success); }
+  .badge-amber { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .prompt-list { display: flex; flex-direction: column; gap: 6px; }
+  .prompt { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; }
+  .prompt-q { font-size: 13px; color: var(--color-text-primary); margin: 0 0 2px; font-weight: 500; }
+  .prompt-hint { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 1.25rem 0; }
+  .setup-steps { display: flex; flex-direction: column; gap: 7px; }
+  .sstep { display: flex; gap: 12px; align-items: flex-start; padding: 9px 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); }
+  .sstep-num { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); min-width: 18px; padding-top: 1px; }
+  .sstep p { font-size: 13px; color: var(--color-text-primary); margin: 0 0 2px; }
+  .sstep .hint { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .kbd { display: inline-block; font-size: 11px; font-family: var(--font-mono); background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: 4px; padding: 1px 5px; color: var(--color-text-secondary); }
+  .tip { padding: 10px 14px; border-radius: var(--border-radius-md); border: 0.5px solid; font-size: 13px; margin-top: 0.75rem; }
+  .tip-blue { background: var(--color-background-info); border-color: var(--color-border-info); color: var(--color-text-info); }
+  .tip-green { background: var(--color-background-success); border-color: var(--color-border-success); color: var(--color-text-success); }
+  .tip-amber { background: var(--color-background-warning); border-color: var(--color-border-warning); color: var(--color-text-warning); }
+  .journal-grid { display: flex; flex-direction: column; gap: 8px; margin-top: 0.5rem; }
+  .j-card { display: flex; gap: 12px; align-items: flex-start; padding: 11px 14px; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); }
+  .j-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+  .j-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
+  .j-desc { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .weekly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 0.5rem; }
+  .wcell { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .wcell-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .wcell-q { font-size: 13px; color: var(--color-text-primary); margin: 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .flow-row:last-child { border-bottom: none; }
+  .flow-time { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); min-width: 36px; padding-top: 1px; }
+  .flow-text { font-size: 13px; color: var(--color-text-primary); }
+</style>
+
+<div class="j-wrap">
+
+  <div class="section-label">Initial Mac setup</div>
+  <div class="setup-steps">
+    <div class="sstep"><span class="sstep-num">1</span><div><p>Open <strong>Journal</strong> — it's in Applications or search with <span class="kbd">⌘ Space</span> → type "Journal"</p><p class="hint">Pre-installed with macOS 26 Tahoe — no download needed</p></div></div>
+    <div class="sstep"><span class="sstep-num">2</span><div><p>Follow the onscreen setup, enable Touch ID lock when prompted</p></div></div>
+    <div class="sstep"><span class="sstep-num">3</span><div><p>Create your three journals — click the <strong>+</strong> button in the sidebar above All Entries, name it, then press Return</p><p class="hint">Control-click any journal to set its colour and icon</p></div></div>
+    <div class="sstep"><span class="sstep-num">4</span><div><p>Set reminders: <strong>Journal menu → Settings → Journaling Habit</strong></p><p class="hint">Morning: 8:00 am · Evening: 8:30 pm · Weekly: Sunday 7:00 pm</p></div></div>
+    <div class="sstep"><span class="sstep-num">5</span><div><p>Enable sharing: <strong>Settings → Allow sharing from other apps</strong></p><p class="hint">Lets you send articles, music, links into Journal from any app via the Share menu</p></div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Your three journals</div>
+  <div class="journal-grid">
+    <div class="j-card">
+      <div class="j-dot" style="background:#5E9AFF"></div>
+      <div>
+        <p class="j-name">Daily Review</p>
+        <p class="j-desc">Morning intention + evening review — your core daily habit. Short entries, 5 min max.</p>
+      </div>
+    </div>
+    <div class="j-card">
+      <div class="j-dot" style="background:#7ED321"></div>
+      <div>
+        <p class="j-name">Weekly Reflection</p>
+        <p class="j-desc">Sunday evening brain dump, look back and look ahead. One entry per week.</p>
+      </div>
+    </div>
+    <div class="j-card">
+      <div class="j-dot" style="background:#F5A623"></div>
+      <div>
+        <p class="j-name">Capture</p>
+        <p class="j-desc">Random thoughts, ideas, things shared from other apps. No structure — just dump it here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip tip-blue">💡 On iPad: use the Pencil to handwrite in Daily Review — it feels much more like a real journal and Apple Pencil handwriting is now native in macOS 26 Journal too.</div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Daily Review journal — your prompts</div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">☀️</span>
+      <span class="card-title">Morning intention</span>
+      <span class="card-badge badge-blue">~3 min · 8:00 am</span>
+    </div>
+    <div class="prompt-list">
+      <div class="prompt">
+        <p class="prompt-q">What is the one thing that would make today feel successful?</p>
+        <p class="prompt-hint">Single answer — forces real prioritisation</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">What's floating in my head that should go into Reminders right now?</p>
+        <p class="prompt-hint">Open Reminders Inbox and dump it — then close it and come back</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span class="card-icon">🌙</span>
+      <span class="card-title">Evening review</span>
+      <span class="card-badge badge-blue">~5 min · 8:30 pm</span>
+    </div>
+    <div class="prompt-list">
+      <div class="prompt">
+        <p class="prompt-q">Three things that went well today — however small</p>
+        <p class="prompt-hint">Always three. Non-negotiable, even on rough days.</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">What didn't happen that needs to move forward?</p>
+        <p class="prompt-hint">Open Reminders and move it now — don't leave it in your head overnight</p>
+      </div>
+      <div class="prompt">
+        <p class="prompt-q">One thought worth keeping</p>
+        <p class="prompt-hint">Optional — an idea, feeling, or observation</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Weekly Reflection journal — Sunday prompts</div>
+  <div class="weekly-grid">
+    <div class="wcell">
+      <p class="wcell-label">Brain dump</p>
+      <p class="wcell-q">What's still in my head that isn't captured anywhere?</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Look back</p>
+      <p class="wcell-q">Highlight of the week? What drained me most?</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Reminders groom</p>
+      <p class="wcell-q">Clear done items · move stale to Someday · set Today for Monday</p>
+    </div>
+    <div class="wcell">
+      <p class="wcell-label">Look ahead</p>
+      <p class="wcell-q">3 most important things for next week?</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">How it all connects — daily flow</div>
+  <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 12px 16px;">
+    <div class="flow-row">
+      <span class="flow-time">AM</span>
+      <span class="flow-text"><strong>Journal → Daily Review</strong> — set intention, dump anything unplanned into <strong>Reminders Inbox</strong></span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-time">Day</span>
+      <span class="flow-text"><strong>Reminders</strong> for tasks · <strong>Notes</strong> for thinking · <strong>Journal Capture</strong> for random ideas via Share menu</span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-time">PM</span>
+      <span class="flow-text"><strong>Journal → Daily Review</strong> — three wins, move anything unfinished in <strong>Reminders</strong></span>
+    </div>
+    <div class="flow-row">
+      <span class="flow-time">Sun</span>
+      <span class="flow-text"><strong>Journal → Weekly Reflection</strong> — brain dump, groom Reminders, create new <strong>Notes</strong> scratch pad for the week</span>
+    </div>
+  </div>
+
+  <div class="tip tip-green" style="margin-top: 0.75rem;">✅ All three journals sync automatically across your Mac, iPhone, and iPad via iCloud — end-to-end encrypted, Face ID / Touch ID locked.</div>
+
+</div>
