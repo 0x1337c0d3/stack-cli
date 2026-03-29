@@ -27,10 +27,12 @@ $ stack reminders show Soon
 $ stack reminders add Soon "Contribute to open source"
 $ stack reminders add Soon "Go to the grocery store" --due-date "tomorrow 9am"
 $ stack reminders add Soon "Something really important" --priority high
+$ stack reminders add Soon "Fix the bug" --notes "see ticket 42" --tags work,urgent
 $ stack reminders show Soon
 0: Contribute to open source
 1: Go to the grocery store (in 10 hours)
 2: Something really important (priority: high)
+3: Fix the bug (see ticket 42) [#work #urgent] (in 10 hours)
 ```
 
 #### Move a reminder to another list
@@ -70,6 +72,14 @@ $ stack reminders delete Soon 0
 Deleted 'Write README'
 ```
 
+#### Filter by tag
+
+```
+$ stack reminders show Soon --tag work
+$ stack reminders show-all --tag urgent
+$ stack reminders show-all --due-date today --tag work
+```
+
 #### Show reminders due on or by a date
 
 ```
@@ -95,7 +105,9 @@ $ stack reminders show Soon --json
     "externalId": "...",
     "isCompleted": false,
     "list": "Soon",
-    "title": "Ship stack-cli"
+    "notes": "see ticket 42 #work #urgent",
+    "tags": ["work", "urgent"],
+    "title": "Fix the bug"
   }
 ]
 ```

@@ -46,6 +46,7 @@ The `move` command takes the source list as the first positional argument: `stac
 - **NSAppleScript**: Called synchronously on the main thread (fine — ArgumentParser's `run()` is on main). No `import AppKit` needed; `NSAppleScript` is in Foundation on macOS.
 - **JSON**: `encodeToJson()` is module-level in `Reminders.swift` and shared by `Notes.swift`. All commands accept `--json` (boolean flag).
 - **move command**: Reassigns `reminder.calendar` to the destination `EKCalendar` and calls `Store.save()`. `EKCalendarItem.calendar` is a mutable property so no copy is needed.
+- **Tags**: Stored as `#tag` tokens appended to the notes field (EventKit has no native tag API). `extractTags(from:)` is module-level in `Reminders.swift` and also used by `EKReminder+Encodable.swift`. Display separates tags from the rest of the notes text. `--tags` on `add` accepts comma-separated values; `--tag` on `show`/`show-all` filters by a single tag.
 
 ## Notes AppleScript
 
